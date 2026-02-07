@@ -1,0 +1,77 @@
+/* 1. CONFIGURACIÓN GENERAL */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa; /* Fondo gris perla (mejora pedida) */
+    color: #2c3e50;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 2. ENCABEZADO (HERO) */
+.hero {
+    background-color: #1a2b48; /* Azul Institucional Martínez-Rojas */
+    color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 5px solid #b5945a; /* Detalle Dorado */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* 3. BOTÓN DE ACCIÓN */
+.btn-primary {
+    display: inline-block;
+    background-color: #b5945a; 
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #d4af37;
+}
+
+/* 4. SECCIONES Y TARJETAS DE SERVICIOS */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    border-left: 4px solid #1a2b48;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+h2, h3 {
+    color: #1a2b48;
+}
+
+/* 5. FOOTER CENTRADO Y COPYRIGHT (mejoras pedidas) */
+footer {
+    background-color: #1a2b48;
+    color: #ffffff;
+    text-align: center; /* Centrado total */
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
