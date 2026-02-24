@@ -1,7 +1,7 @@
 /* 1. CONFIGURACIÓN GENERAL */
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8f9fa; /* Fondo gris perla (mejora pedida) */
+    background-color: #f8f9fa; /* Fondo gris perla */
     color: #2c3e50;
     margin: 0;
     line-height: 1.6;
@@ -22,7 +22,25 @@ body {
     letter-spacing: 1px;
 }
 
-/* 3. BOTÓN DE ACCIÓN */
+/* 3. BOTÓN DE ACCIÓN CON ANIMACIÓN VIVA */
+/* Definición de la animación: Pulso de sombra + Brillo interno */
+@keyframes pulso-vivo {
+    0% {
+        box-shadow: 0 0 0 0 rgba(181, 148, 90, 0.8);
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.2); /* El botón brilla un poquito en el medio del ciclo */
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(181, 148, 90, 0);
+        filter: brightness(1);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(181, 148, 90, 0);
+    }
+}
+
 .btn-primary {
     display: inline-block;
     background-color: #b5945a; 
@@ -33,11 +51,16 @@ body {
     border-radius: 4px;
     margin-top: 20px;
     text-transform: uppercase;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    
+    /* SE ACTIVA SOLO: Pulsa y brilla cada 2 segundos infinitamente */
+    animation: pulso-vivo 2s infinite;
 }
 
 .btn-primary:hover {
     background-color: #d4af37;
+    transform: scale(1.05);
+    animation: none; /* Opcional: se detiene el pulso cuando el usuario ya lo "atrapó" con el cursor */
 }
 
 /* 4. SECCIONES Y TARJETAS DE SERVICIOS */
@@ -59,13 +82,17 @@ h2, h3 {
     color: #1a2b48;
 }
 
-/* 5. FOOTER CENTRADO Y COPYRIGHT (mejoras pedidas) */
+/* 5. FOOTER CENTRADO Y COPYRIGHT */
 footer {
     background-color: #1a2b48;
     color: #ffffff;
-    text-align: center; /* Centrado total */
+    text-align: center; 
     padding: 40px 20px;
     margin-top: 50px;
+}
+
+.footer-content p {
+    margin: 5px 0;
 }
 
 .copyright {
